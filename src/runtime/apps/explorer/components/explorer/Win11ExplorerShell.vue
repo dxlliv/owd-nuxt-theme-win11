@@ -10,7 +10,7 @@ import Win11ExplorerStatusBar from './Win11ExplorerStatusBar.vue'
 import Win11ExplorerTabStrip from './Win11ExplorerTabStrip.vue'
 import { useI18n } from 'vue-i18n'
 import { provide } from 'vue'
-import { useWindowDragHandlers } from '@owdproject/core/runtime/composables/useWindowDragHandlers'
+import { useWindowDragHandlers } from 'nuxt-desktop/runtime/composables/useWindowDragHandlers'
 
 const props = defineProps<{
   config?: WindowConfig

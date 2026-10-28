@@ -1,5 +1,5 @@
-import { useApplicationEntries } from '@owdproject/core/runtime/composables/useApplicationEntries'
-import { useDesktopSession } from '@owdproject/core/runtime/composables/useDesktopSession'
+import { useApplicationEntries } from 'nuxt-desktop/runtime/composables/useApplicationEntries'
+import { useDesktopSession } from 'nuxt-desktop/runtime/composables/useDesktopSession'
 import {
   useWin11StartMenuFs,
   type Win11RecentFileEntry,

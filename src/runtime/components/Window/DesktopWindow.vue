@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useSlots, computed, useAttrs, withDefaults } from 'vue'
 import type { IWindowController } from '@owdproject/core'
-import { useWindowDragHandlers } from '@owdproject/core/runtime/composables/useWindowDragHandlers'
+import { useWindowDragHandlers } from 'nuxt-desktop/runtime/composables/useWindowDragHandlers'
 
 const props = withDefaults(
   defineProps<{

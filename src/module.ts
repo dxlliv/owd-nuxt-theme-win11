@@ -5,7 +5,7 @@ import {
   addPlugin,
   installModule,
 } from '@nuxt/kit'
-import { defineDesktopTheme, hasDesktopModule } from '@owdproject/core'
+import { defineDesktopTheme, hasDesktopModule } from 'nuxt-desktop'
 import {
   registerTailwindPath,
   registerThemeTailwindPath,
@@ -13,7 +13,7 @@ import {
 import {
   WIN11_EXPLORER_QUICK_ACCESS_SEED,
   WIN11_EXPLORER_SPECIAL_FOLDERS,
-} from './runtime/apps/explorer/explorerNav.defaults'
+} from './explorerNav.defaults'
 
 export default defineDesktopTheme({
   meta: {

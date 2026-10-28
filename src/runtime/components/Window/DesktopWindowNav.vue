@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { inject } from 'vue'
 import type { IWindowController } from '@owdproject/core'
-import { useToggleWindowMaximize } from '@owdproject/core/runtime/composables/useToggleWindowMaximize'
+import { useToggleWindowMaximize } from 'nuxt-desktop/runtime/composables/useToggleWindowMaximize'
 import ButtonWindowNavMinimize from '../Button/ButtonWindowNavMinimize.vue'
 import ButtonWindowNavMaximize from '../Button/ButtonWindowNavMaximize.vue'
 import ButtonWindowNavClose from '../Button/ButtonWindowNavClose.vue'

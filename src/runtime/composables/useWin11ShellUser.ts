@@ -1,4 +1,4 @@
-import { useDesktopShellIdentity } from '@owdproject/core/runtime/composables/useDesktopShellIdentity'
+import { useDesktopShellIdentity } from 'nuxt-desktop/runtime/composables/useDesktopShellIdentity'
 
 /**
  * Win11 shell user display — delegates to {@link useDesktopShellIdentity}.

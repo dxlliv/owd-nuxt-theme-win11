@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useApplicationManager } from '@owdproject/core/runtime/composables/useApplicationManager'
-import { useDesktopWorkspaceStore } from '@owdproject/core/runtime/stores/storeDesktopWorkspace'
+import { useApplicationManager } from 'nuxt-desktop/runtime/composables/useApplicationManager'
+import { useDesktopWorkspaceStore } from 'nuxt-desktop/runtime/stores/storeDesktopWorkspace'
 import { useI18n } from 'vue-i18n'
 import { computed, TransitionGroup } from 'vue'
 

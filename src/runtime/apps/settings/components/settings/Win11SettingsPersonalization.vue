@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDesktopStore } from '@owdproject/core/runtime/stores/storeDesktop'
+import { useDesktopStore } from 'nuxt-desktop/runtime/stores/storeDesktop'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
