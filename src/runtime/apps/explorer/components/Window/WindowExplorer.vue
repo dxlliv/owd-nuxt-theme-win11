@@ -2,7 +2,7 @@
 import { useConfirm } from 'primevue/useconfirm'
 import { useI18n } from 'vue-i18n'
 import type { IWindowController } from '@owdproject/core'
-import { createExplorerWindowMenuItems } from '@owdproject/module-fs/runtime/composables/useExplorerWindowMenu'
+import { createExplorerWindowMenuItems } from '@owdproject/module-nuxt-fs/runtime/composables/useExplorerWindowMenu'
 import Win11ExplorerShell from '../explorer/Win11ExplorerShell.vue'
 
 const props = defineProps<{

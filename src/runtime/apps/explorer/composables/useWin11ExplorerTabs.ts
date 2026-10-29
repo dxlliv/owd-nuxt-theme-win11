@@ -1,5 +1,5 @@
-import type { IWindowController } from '@owdproject/core'
-import { useExplorerTabs } from '@owdproject/module-fs/runtime/composables/useExplorerTabs'
+import type { IWindowController } from '@owdproject/nuxt'
+import { useExplorerTabs } from '@owdproject/module-nuxt-fs/runtime/composables/useExplorerTabs'
 
 type FsExplorerLike = Parameters<typeof useExplorerTabs>[1]
 

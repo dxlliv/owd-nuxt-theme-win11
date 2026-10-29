@@ -2,13 +2,13 @@
 import { computed, ref, Transition } from 'vue'
 import { useNow } from '@vueuse/core'
 import { useAppConfig } from 'nuxt/app'
-import { useApplicationManager } from 'nuxt-desktop/runtime/composables/useApplicationManager'
-import { useWorkspaceManager } from 'nuxt-desktop/runtime/composables/useWorkspaceManager'
-import { useDesktopStore } from 'nuxt-desktop/runtime/stores/storeDesktop'
-import { useDesktopWorkspaceStore } from 'nuxt-desktop/runtime/stores/storeDesktopWorkspace'
-import { useDesktopSession } from 'nuxt-desktop/runtime/composables/useDesktopSession'
-import { useBlockNonInputContextMenu } from 'nuxt-desktop/runtime/composables/useBlockNonInputContextMenu'
-import { useDesktopWorkArea } from 'nuxt-desktop/runtime/composables/useDesktopWorkArea'
+import { useApplicationManager } from '@owdproject/nuxt/runtime/composables/useApplicationManager'
+import { useDesktopWorkspaceManager } from '@owdproject/nuxt/runtime/composables/workspace/useDesktopWorkspaceManager'
+import { useDesktopStore } from '@owdproject/nuxt/runtime/stores/storeDesktop'
+import { useDesktopWorkspaceStore } from '@owdproject/nuxt/runtime/stores/storeDesktopWorkspace'
+import { useDesktopSession } from '@owdproject/nuxt/runtime/composables/useDesktopSession'
+import { useBlockNonInputContextMenu } from '@owdproject/nuxt/runtime/composables/useBlockNonInputContextMenu'
+import { useDesktopWorkArea } from '@owdproject/nuxt/runtime/composables/useDesktopWorkArea'
 import Win11WindowSnapHints from './Win11WindowSnapHints.vue'
 import Win11WorkspaceEdgeHints from './Win11WorkspaceEdgeHints.vue'
 import Win11ConfirmDialogs from './Win11ConfirmDialogs.vue'
@@ -79,7 +79,7 @@ const taskbarApps = computed(() => {
 function openExplorer() {
   if (!applicationManager.isAppDefined('org.owdproject.explorer')) {
     console.warn(
-      '[win11] Explorer is not registered — add @owdproject/module-fs to desktop.config modules.',
+      '[win11] Explorer is not registered — add @owdproject/module-nuxt-fs to desktop.config modules.',
     )
     return
   }
@@ -110,7 +110,7 @@ function toggleOverview() {
   desktopWorkspaceStore.setOverview(!desktopWorkspaceStore.overview)
 }
 
-const { onWorkspaceDragOver, onWorkspaceDrop } = useWorkspaceManager()
+const { onWorkspaceDragOver, onWorkspaceDrop } = useDesktopWorkspaceManager()
 
 function onWorkspacePanelClick(workspaceId: string, e: MouseEvent) {
   if (!desktopWorkspaceStore.overview) return

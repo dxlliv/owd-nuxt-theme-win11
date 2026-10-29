@@ -1,4 +1,4 @@
-import { defineNuxtPlugin } from '#app'
+import { defineNuxtPlugin } from 'nuxt/app'
 import type { Ref } from 'vue'
 import {
   win11StartMenuFsKey,
@@ -7,7 +7,7 @@ import {
 } from '../composables/useWin11StartMenuFs'
 
 /**
- * Wired only when `@owdproject/module-fs` is listed in `defineDesktopConfig({ modules })`.
+ * Wired only when `@owdproject/module-nuxt-fs` is listed in `defineDesktopConfig({ modules })`.
  * Dynamic import + `@vite-ignore` keeps themes buildable without module-fs installed.
  */
 export default defineNuxtPlugin({
@@ -18,11 +18,11 @@ export default defineNuxtPlugin({
       const [{ useFsRecentFiles }, { openVfsFile }] = await Promise.all([
         import(
           /* @vite-ignore */
-          '@owdproject/module-fs/dist/runtime/composables/useFsRecentFiles.js'
+          '@owdproject/module-nuxt-fs/dist/runtime/composables/useFsRecentFiles.js'
         ),
         import(
           /* @vite-ignore */
-          '@owdproject/module-fs/dist/runtime/utils/utilFsOpenFile.js'
+          '@owdproject/module-nuxt-fs/dist/runtime/utils/utilFsOpenFile.js'
         ),
       ])
 

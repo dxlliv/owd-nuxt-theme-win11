@@ -8,18 +8,24 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@owdproject/app-classic-audioplayer": "workspace:*",
-    "@owdproject/app-classic-videoplayer": "workspace:*",
+    "@owdproject/app-nuxt-classic-audioplayer": "workspace:*",
+    "@owdproject/app-nuxt-classic-videoplayer": "workspace:*",
     "@owdproject/app-gridsky": "workspace:*",
     "@owdproject/app-slowroads": "workspace:*",
-    "@owdproject/app-soundcloud": "workspace:*",
-    "@owdproject/app-terminal": "workspace:*",
-    "@owdproject/app-wasmboy": "workspace:*",
-    "@owdproject/app-youtube": "workspace:*",
+    "@owdproject/app-nuxt-soundcloud": "workspace:*",
+    "@owdproject/app-nuxt-terminal": "workspace:*",
+    "@owdproject/app-nuxt-wasmboy": "workspace:*",
+    "@owdproject/app-nuxt-youtube": "workspace:*",
     "@owdproject/core": "workspace:*",
-    "@owdproject/module-fs": "workspace:*",
-    "@owdproject/nuxt-persistence-pinia": "workspace:*",
-    "@owdproject/theme-win11": "workspace:*",
-    "nuxt": "^4.4.4"
+    "@owdproject/module-nuxt-fs": "workspace:*",
+    "@owdproject/nuxt": "workspace:*",
+    "@owdproject/module-nuxt-pinia-persistence": "workspace:*",
+    "@dxlliv/owd-theme-nuxt-win11": "workspace:*",
+    "nuxt": "^4.4.4",
+    "primevue": "^4.5.5"
+  },
+  "devDependencies": {
+    "jiti": "^2.7.0",
+    "tailwindcss": "^3.4.19"
   }
 }

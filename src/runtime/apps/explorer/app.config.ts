@@ -1,3 +1,5 @@
+import type { IApplicationController } from '@owdproject/nuxt'
+
 export default {
   id: 'org.owdproject.explorer',
   title: 'Explorer',

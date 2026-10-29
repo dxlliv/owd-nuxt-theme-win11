@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ExplorerChromeBandBase from '@owdproject/kit-primevue/runtime/components/explorer/ChromeBandBase.vue'
+import ExplorerChromeBandBase from '@owdproject/kit-nuxt-primevue/runtime/components/explorer/ChromeBandBase.vue'
 import Win11ExplorerBreadcrumbBar from './Win11ExplorerBreadcrumbBar.vue'
 import Win11ExplorerNavRow from './Win11ExplorerNavRow.vue'
 

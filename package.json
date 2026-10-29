@@ -1,5 +1,5 @@
 {
-  "name": "@owdproject/theme-win11",
+  "name": "@dxlliv/owd-theme-nuxt-win11",
   "version": "0.0.1",
   "description": "Windows 11 desktop theme for OWD clients",
   "homepage": "https://github.com/dxlliv/theme-win11#readme",
@@ -41,36 +41,36 @@
   },
   "dependencies": {
     "@nuxt/kit": "^4.6.2",
-    "@owdproject/kit-primevue": "workspace:*",
-    "nuxt-desktop": "workspace:*",
+    "@owdproject/kit-nuxt-primevue": "workspace:*",
     "defu": "^6.1.4",
-    "vuedraggable": "^4.1.0"
+    "vuedraggable": "^4.1.0",
+    "@owdproject/nuxt": "^4.0.0-alpha.3"
   },
   "devDependencies": {
     "@nuxt/devtools": "^3.2.4",
     "@nuxt/module-builder": "^1.0.2",
     "@nuxt/schema": "^4.6.2",
     "@owdproject/core": "workspace:*",
-    "@owdproject/module-fs": "workspace:*",
-    "@owdproject/kit-primevue": "workspace:*",
-    "@owdproject/kit-tailwind": "workspace:*",
+    "@owdproject/module-nuxt-fs": "workspace:*",
+    "@owdproject/kit-nuxt-primevue": "workspace:*",
+    "@owdproject/kit-nuxt-tailwind": "workspace:*",
     "nuxt": "^4.6.2",
     "typescript": "~6.0.3"
   },
   "optionalDependencies": {
-    "@owdproject/app-classic-audioplayer": "workspace:*",
-    "@owdproject/nuxt-persistence-pinia": "workspace:*"
+    "@owdproject/app-nuxt-classic-audioplayer": "workspace:*",
+    "@owdproject/module-nuxt-pinia-persistence": "workspace:*"
   },
   "peerDependencies": {
     "@owdproject/core": ">=4.0.0-alpha.0",
-    "nuxt-desktop": ">=1.0.0",
-    "@owdproject/kit-primevue": "^0.1.0",
-    "@owdproject/kit-tailwind": "^0.1.0",
-    "@owdproject/module-fs": "^0.0.6",
-    "nuxt": "^4.6.2"
+    "@owdproject/kit-nuxt-primevue": "^0.1.0",
+    "@owdproject/kit-nuxt-tailwind": "^0.1.0",
+    "@owdproject/module-nuxt-fs": "^0.0.6",
+    "nuxt": "^4.6.2",
+    "@owdproject/nuxt": "^4.0.0-alpha.3"
   },
   "peerDependenciesMeta": {
-    "@owdproject/module-fs": {
+    "@owdproject/module-nuxt-fs": {
       "optional": true
     }
   }

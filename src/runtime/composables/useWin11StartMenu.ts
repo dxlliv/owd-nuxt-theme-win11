@@ -1,5 +1,5 @@
-import { useApplicationEntries } from 'nuxt-desktop/runtime/composables/useApplicationEntries'
-import { useDesktopSession } from 'nuxt-desktop/runtime/composables/useDesktopSession'
+import { useApplicationEntries } from '@owdproject/nuxt/runtime/composables/useApplicationEntries'
+import { useDesktopSession } from '@owdproject/nuxt/runtime/composables/useDesktopSession'
 import {
   useWin11StartMenuFs,
   type Win11RecentFileEntry,
@@ -99,7 +99,7 @@ export function useWin11StartMenu() {
 
   function hydrateFromStorage() {
     pinnedIds.value = loadJson<string[]>(STORAGE_PINNED, [])
-    const raw = loadJson(STORAGE_ALL_VIEW, 'category')
+    const raw = loadJson<Win11AllAppsView>(STORAGE_ALL_VIEW, 'category')
     allAppsView.value =
       raw === 'grid' || raw === 'list' || raw === 'category' ? raw : 'category'
     loadRecentFiles()

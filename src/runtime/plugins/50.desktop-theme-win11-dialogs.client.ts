@@ -1,5 +1,5 @@
 import { defineNuxtPlugin } from 'nuxt/app'
-import { setupDesktopDialogProvider } from '@owdproject/kit-primevue/runtime/dialogs/setupDesktopDialogProvider'
+import { setupDesktopDialogProvider } from '@owdproject/kit-nuxt-primevue/runtime/dialogs/setupDesktopDialogProvider'
 import { createWin11DesktopDialogs } from '../utils/createWin11DesktopDialogs'
 
 export default defineNuxtPlugin({

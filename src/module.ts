@@ -5,11 +5,11 @@ import {
   addPlugin,
   installModule,
 } from '@nuxt/kit'
-import { defineDesktopTheme, hasDesktopModule } from 'nuxt-desktop'
+import { defineDesktopTheme, hasDesktopModule } from '@owdproject/nuxt'
 import {
   registerTailwindPath,
   registerThemeTailwindPath,
-} from '@owdproject/kit-tailwind/kit/registerTailwindPath'
+} from '@owdproject/kit-nuxt-tailwind/kit/registerTailwindPath'
 import {
   WIN11_EXPLORER_QUICK_ACCESS_SEED,
   WIN11_EXPLORER_SPECIAL_FOLDERS,
@@ -54,11 +54,11 @@ export default defineDesktopTheme({
   async setup(_options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
 
-    await installModule('@owdproject/kit-primevue')
+    await installModule('@owdproject/kit-nuxt-primevue')
 
     registerThemeTailwindPath(nuxt, import.meta.url)
 
-    if (hasDesktopModule(nuxt, 'module-fs')) {
+    if (hasDesktopModule(nuxt, 'nuxt-fs')) {
       addPlugin({
         src: resolve('./runtime/plugins/win11-module-fs-recent.client.ts'),
         mode: 'client',
@@ -100,7 +100,7 @@ export default defineDesktopTheme({
       path: resolve('./runtime/apps/settings/components'),
     })
 
-    if (hasDesktopModule(nuxt, 'module-fs')) {
+    if (hasDesktopModule(nuxt, 'nuxt-fs')) {
       addPlugin({
         src: resolve('./runtime/apps/explorer/plugin.ts'),
         mode: 'client',

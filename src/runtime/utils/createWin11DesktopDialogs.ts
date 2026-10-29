@@ -2,7 +2,7 @@ import type { useConfirm } from 'primevue/useconfirm'
 import type {
   DesktopConfirmDialogOptions,
   DesktopDialogProvider,
-} from 'nuxt-desktop/runtime/dialogs/desktopDialogProvider'
+} from '@owdproject/nuxt/runtime/dialogs/desktopDialogProvider'
 
 /** PrimeVue-backed dialogs; styling differs per theme via CSS tokens later. */
 export function createWin11DesktopDialogs(

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { IWindowController } from '@owdproject/core'
-import { useExplorerStore } from '@owdproject/module-fs/runtime/stores/storeExplorer'
+import { useExplorerStore } from '@owdproject/module-nuxt-fs/runtime/stores/storeExplorer'
 import { useRuntimeConfig } from 'nuxt/app'
 import { computed, nextTick, onMounted, ref, withDefaults } from 'vue'
-import { useDesktopShellIdentity } from 'nuxt-desktop/runtime/composables/useDesktopShellIdentity'
+import { useDesktopShellIdentity } from '@owdproject/nuxt/runtime/composables/useDesktopShellIdentity'
 import Tree from 'primevue/tree'
 import type { TreeNode } from 'primevue/treenode'
 import draggable from 'vuedraggable'

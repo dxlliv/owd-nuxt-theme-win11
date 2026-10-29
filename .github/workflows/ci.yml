@@ -23,23 +23,23 @@ jobs:
           path: client
           submodules: recursive
 
-      - name: Checkout kit-tailwind
+      - name: Checkout kit-nuxt-tailwind
         uses: actions/checkout@v4
         with:
-          repository: owdproject/kit-tailwind
-          path: client/packages/kit-tailwind
+          repository: owdproject/owd-kit-nuxt-tailwind
+          path: client/packages/owd-kit-nuxt-tailwind
 
-      - name: Checkout kit-primevue
+      - name: Checkout kit-nuxt-primevue
         uses: actions/checkout@v4
         with:
-          repository: owdproject/kit-primevue
-          path: client/packages/kit-primevue
+          repository: owdproject/owd-kit-nuxt-primevue
+          path: client/packages/owd-kit-nuxt-primevue
 
       - name: Checkout module-fs
         uses: actions/checkout@v4
         with:
-          repository: owdproject/module-fs
-          path: client/packages/module-fs
+          repository: owdproject/owd-module-fs
+          path: client/packages/owd-module-fs
 
       - name: Checkout module-persistence
         uses: actions/checkout@v4
@@ -98,8 +98,8 @@ jobs:
       - name: Checkout theme-nova
         uses: actions/checkout@v4
         with:
-          repository: owdproject/theme-nova
-          path: client/themes/theme-nova
+          repository: owdproject/owd-nuxt-theme-nova
+          path: client/themes/owd-nuxt-theme-nova
 
       - name: Overlay this theme-win11 repo
         uses: actions/checkout@v4
