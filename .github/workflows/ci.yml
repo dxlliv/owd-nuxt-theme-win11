@@ -44,7 +44,7 @@ jobs:
       - name: Checkout module-persistence
         uses: actions/checkout@v4
         with:
-          repository: owdproject/module-persistence
+          repository: owdproject/nuxt-module-pinia-persistence
           path: client/packages/module-persistence
 
       - name: Checkout app-todo
@@ -98,7 +98,7 @@ jobs:
       - name: Checkout theme-nova
         uses: actions/checkout@v4
         with:
-          repository: owdproject/owd-nuxt-theme-nova
+          repository: owdproject/nuxt-theme-nova
           path: client/themes/owd-nuxt-theme-nova
 
       - name: Overlay this theme-win11 repo
