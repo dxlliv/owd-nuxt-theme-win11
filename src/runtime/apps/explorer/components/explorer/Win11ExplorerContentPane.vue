@@ -4,7 +4,7 @@ import DataTable from 'primevue/datatable'
 import Win11ExplorerItemContextMenu from './Win11ExplorerItemContextMenu.vue'
 import Win11ExplorerFileIcon from './Win11ExplorerFileIcon.vue'
 import { computed, inject } from 'vue'
-import { explorerEntryAbsolutePath } from '@owdproject/module-nuxt-fs/runtime/utils/utilExplorerEntryPath'
+import { explorerEntryAbsolutePath } from '@owdproject/nuxt-module-fs/runtime/utils/utilExplorerEntryPath'
 
 const props = defineProps<{
   window: IWindowController

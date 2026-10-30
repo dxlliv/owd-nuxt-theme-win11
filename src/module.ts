@@ -9,7 +9,7 @@ import { defineDesktopTheme, hasDesktopModule } from '@owdproject/nuxt'
 import {
   registerTailwindPath,
   registerThemeTailwindPath,
-} from '@owdproject/kit-nuxt-tailwind/kit/registerTailwindPath'
+} from '@owdproject/nuxt-kit-tailwind/kit/registerTailwindPath'
 import {
   WIN11_EXPLORER_QUICK_ACCESS_SEED,
   WIN11_EXPLORER_SPECIAL_FOLDERS,
@@ -54,7 +54,7 @@ export default defineDesktopTheme({
   async setup(_options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
 
-    await installModule('@owdproject/kit-nuxt-primevue')
+    await installModule('@owdproject/nuxt-kit-primevue')
 
     registerThemeTailwindPath(nuxt, import.meta.url)
 

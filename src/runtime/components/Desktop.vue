@@ -79,7 +79,7 @@ const taskbarApps = computed(() => {
 function openExplorer() {
   if (!applicationManager.isAppDefined('org.owdproject.explorer')) {
     console.warn(
-      '[win11] Explorer is not registered — add @owdproject/module-nuxt-fs to desktop.config modules.',
+      '[win11] Explorer is not registered — add @owdproject/nuxt-module-fs to desktop.config modules.',
     )
     return
   }

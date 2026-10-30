@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { IWindowController } from '@owdproject/core'
-import { useExplorerStore } from '@owdproject/module-nuxt-fs/runtime/stores/storeExplorer'
+import { useExplorerStore } from '@owdproject/nuxt-module-fs/runtime/stores/storeExplorer'
 import { useRuntimeConfig } from 'nuxt/app'
 import { computed, nextTick, onMounted, ref, withDefaults } from 'vue'
 import { useDesktopShellIdentity } from '@owdproject/nuxt/runtime/composables/useDesktopShellIdentity'

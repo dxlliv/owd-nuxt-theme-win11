@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { IWindowController, WindowConfig } from '@owdproject/core'
-import { useExplorerTabs } from '@owdproject/module-nuxt-fs/runtime/composables/useExplorerTabs'
+import { useExplorerTabs } from '@owdproject/nuxt-module-fs/runtime/composables/useExplorerTabs'
 import type { MenuItem } from 'primevue/menuitem'
-import { useExplorerWindow } from '@owdproject/module-nuxt-fs/runtime/composables/useExplorerWindow'
+import { useExplorerWindow } from '@owdproject/nuxt-module-fs/runtime/composables/useExplorerWindow'
 import Win11ExplorerCommandBar from './Win11ExplorerCommandBar.vue'
 import Win11ExplorerChromeBand from './Win11ExplorerChromeBand.vue'
 import Win11ExplorerMainPane from './Win11ExplorerMainPane.vue'

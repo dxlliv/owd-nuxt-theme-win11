@@ -19,26 +19,26 @@ jobs:
       - name: Checkout OWD client (workspace deps)
         uses: actions/checkout@v4
         with:
-          repository: owdproject/client
+          repository: owdproject/nuxt-desktop
           path: client
           submodules: recursive
 
       - name: Checkout kit-nuxt-tailwind
         uses: actions/checkout@v4
         with:
-          repository: owdproject/owd-kit-nuxt-tailwind
+          repository: owdproject/nuxt-kit-tailwind
           path: client/packages/owd-kit-nuxt-tailwind
 
       - name: Checkout kit-nuxt-primevue
         uses: actions/checkout@v4
         with:
-          repository: owdproject/owd-kit-nuxt-primevue
+          repository: owdproject/nuxt-kit-primevue
           path: client/packages/owd-kit-nuxt-primevue
 
       - name: Checkout module-fs
         uses: actions/checkout@v4
         with:
-          repository: owdproject/owd-module-fs
+          repository: owdproject/nuxt-module-fs
           path: client/packages/owd-module-fs
 
       - name: Checkout module-persistence
@@ -50,19 +50,19 @@ jobs:
       - name: Checkout app-todo
         uses: actions/checkout@v4
         with:
-          repository: owdproject/app-todo
+          repository: owdproject/nuxt-app-todo
           path: client/apps/app-todo
 
       - name: Checkout app-classic-audioplayer
         uses: actions/checkout@v4
         with:
-          repository: owdproject/app-classic-audioplayer
+          repository: owdproject/nuxt-app-classic-audioplayer
           path: client/apps/app-classic-audioplayer
 
       - name: Checkout app-classic-videoplayer
         uses: actions/checkout@v4
         with:
-          repository: owdproject/app-classic-videoplayer
+          repository: owdproject/nuxt-app-classic-videoplayer
           path: client/apps/app-classic-videoplayer
 
       - name: Checkout app-gridsky
@@ -74,25 +74,25 @@ jobs:
       - name: Checkout app-youtube
         uses: actions/checkout@v4
         with:
-          repository: owdproject/app-youtube
+          repository: owdproject/nuxt-app-youtube
           path: client/apps/app-youtube
 
       - name: Checkout app-soundcloud
         uses: actions/checkout@v4
         with:
-          repository: owdproject/app-soundcloud
+          repository: owdproject/nuxt-app-soundcloud
           path: client/apps/app-soundcloud
 
       - name: Checkout app-wasmboy
         uses: actions/checkout@v4
         with:
-          repository: owdproject/app-wasmboy
+          repository: owdproject/nuxt-app-wasmboy
           path: client/apps/app-wasmboy
 
       - name: Checkout app-terminal
         uses: actions/checkout@v4
         with:
-          repository: owdproject/app-terminal
+          repository: owdproject/nuxt-app-terminal
           path: client/apps/app-terminal
 
       - name: Checkout theme-nova

@@ -87,7 +87,7 @@ export default {
       },
     },
   },
-  /** Alias for `@owdproject/module-nuxt-fs` prompts (`t('dialog.shortcutOverride.*')`). */
+  /** Alias for `@owdproject/nuxt-module-fs` prompts (`t('dialog.shortcutOverride.*')`). */
   dialog: {
     shortcutOverride: {
       confirm: {

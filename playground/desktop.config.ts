@@ -1,17 +1,17 @@
 import { defineDesktopConfig } from '@owdproject/nuxt'
 
 export default defineDesktopConfig({
-  theme: '@dxlliv/owd-theme-nuxt-win11',
-  modules: ['@owdproject/module-nuxt-fs', '@owdproject/module-nuxt-pinia-persistence'],
+  theme: '@owdproject/nuxt-theme-win11',
+  modules: ['@owdproject/nuxt-module-fs', '@owdproject/nuxt-module-pinia-persistence'],
   apps: [
-    '@owdproject/app-nuxt-classic-audioplayer',
-    '@owdproject/app-nuxt-classic-videoplayer',
-    '@owdproject/app-gridsky',
-    '@owdproject/app-slowroads',
-    '@owdproject/app-nuxt-wasmboy',
-    '@owdproject/app-nuxt-terminal',
-    '@owdproject/app-nuxt-youtube',
-    '@owdproject/app-nuxt-soundcloud',
+    '@owdproject/nuxt-app-classic-audioplayer',
+    '@owdproject/nuxt-app-classic-videoplayer',
+    '@owdproject/nuxt-app-gridsky',
+    '@owdproject/nuxt-app-slowroads',
+    '@owdproject/nuxt-app-wasmboy',
+    '@owdproject/nuxt-app-terminal',
+    '@owdproject/nuxt-app-youtube',
+    '@owdproject/nuxt-app-soundcloud',
   ],
   systemBar: { enabled: true, startButton: true },
   terminal: {
