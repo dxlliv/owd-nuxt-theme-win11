@@ -39,8 +39,8 @@
           Maintained by Diego Villa (<a href="https://github.com/dxlliv" target="_blank">@dxlliv</a>).
         </p>
         <p class="mt-2">
-          <a href="https://github.com/dxlliv/nuxt-theme-win11" target="_blank">
-            github.com/dxlliv/nuxt-theme-win11
+          <a href="https://github.com/dxlliv/owd-nuxt-theme-win11" target="_blank">
+            github.com/dxlliv/owd-nuxt-theme-win11
           </a>
         </p>
       </div>

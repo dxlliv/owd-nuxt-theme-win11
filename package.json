@@ -2,7 +2,7 @@
   "name": "@owdproject/nuxt-theme-win11",
   "version": "4.0.0-alpha.3",
   "description": "Windows 11 desktop theme for OWD clients",
-  "homepage": "https://github.com/dxlliv/nuxt-theme-win11#readme",
+  "homepage": "https://github.com/dxlliv/owd-nuxt-theme-win11#readme",
   "license": "MIT",
   "author": {
     "name": "Diego Villa",
