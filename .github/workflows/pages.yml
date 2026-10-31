@@ -26,6 +26,12 @@ jobs:
           path: client
           submodules: recursive
 
+      - name: Checkout @owdproject/nuxt
+        uses: actions/checkout@v4
+        with:
+          repository: owdproject/nuxt
+          path: client/packages/nuxt
+
       - name: Checkout kit-nuxt-tailwind
         uses: actions/checkout@v4
         with:
