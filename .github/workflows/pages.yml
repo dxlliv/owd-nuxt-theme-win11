@@ -98,11 +98,11 @@ jobs:
           repository: owdproject/nuxt-app-terminal
           path: client/apps/app-terminal
 
-      - name: Checkout theme-nova
+      - name: Checkout theme-paper
         uses: actions/checkout@v4
         with:
-          repository: owdproject/nuxt-theme-nova
-          path: client/themes/owd-nuxt-theme-nova
+          repository: owdproject/nuxt-theme-paper
+          path: client/themes/owd-nuxt-theme-paper
 
       - name: Overlay this theme-win11 repo
         uses: actions/checkout@v4
