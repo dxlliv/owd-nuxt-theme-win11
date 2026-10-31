@@ -1,6 +1,6 @@
 {
   "name": "@owdproject/nuxt-theme-win11",
-  "version": "0.0.1",
+  "version": "4.0.0-alpha.3",
   "description": "Windows 11 desktop theme for OWD clients",
   "homepage": "https://github.com/dxlliv/nuxt-theme-win11#readme",
   "license": "MIT",
@@ -26,12 +26,14 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "nx": {
     "name": "theme-win11"
   },
   "scripts": {
+    "prepublishOnly": "node -e 'if (process.env.npm_package_version?.includes(\"verdaccio\") && !process.env.ALLOW_VERDACCIO) { console.error(\"FATAL: Snapshot versions (*-verdaccio.*) cannot be published to public npm!\"); process.exit(1); }'",
     "prepack": "nuxt-module-build build",
     "dev": "pnpm run dev:prepare && cd playground && pnpm exec nuxt dev",
     "dev:build": "nuxt build playground",
@@ -41,7 +43,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^4.6.2",
-    "@owdproject/nuxt-kit-primevue": "workspace:*",
+    "@owdproject/nuxt-kit-primevue": "^4.0.0-alpha.3",
     "defu": "^6.1.4",
     "vuedraggable": "^4.1.0",
     "@owdproject/nuxt": "^4.0.0-alpha.3"
@@ -50,22 +52,22 @@
     "@nuxt/devtools": "^3.2.4",
     "@nuxt/module-builder": "^1.0.2",
     "@nuxt/schema": "^4.6.2",
-    "@owdproject/core": "workspace:*",
-    "@owdproject/nuxt-module-fs": "workspace:*",
-    "@owdproject/nuxt-kit-primevue": "workspace:*",
-    "@owdproject/nuxt-kit-tailwind": "workspace:*",
+    "@owdproject/core": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-module-fs": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-kit-primevue": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-kit-tailwind": "^4.0.0-alpha.3",
     "nuxt": "^4.6.2",
     "typescript": "~6.0.3"
   },
   "optionalDependencies": {
-    "@owdproject/nuxt-app-classic-audioplayer": "workspace:*",
-    "@owdproject/nuxt-module-pinia-persistence": "workspace:*"
+    "@owdproject/nuxt-app-classic-audioplayer": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-module-pinia-persistence": "^4.0.0-alpha.3"
   },
   "peerDependencies": {
     "@owdproject/core": ">=4.0.0-alpha.0",
-    "@owdproject/nuxt-kit-primevue": "^0.1.0",
-    "@owdproject/nuxt-kit-tailwind": "^0.1.0",
-    "@owdproject/nuxt-module-fs": "^0.0.6",
+    "@owdproject/nuxt-kit-primevue": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-kit-tailwind": "^4.0.0-alpha.3",
+    "@owdproject/nuxt-module-fs": "^4.0.0-alpha.3",
     "nuxt": "^4.6.2",
     "@owdproject/nuxt": "^4.0.0-alpha.3"
   },
@@ -73,5 +75,10 @@
     "@owdproject/nuxt-module-fs": {
       "optional": true
     }
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "alpha",
+    "registry": "https://registry.npmjs.org/"
   }
 }
