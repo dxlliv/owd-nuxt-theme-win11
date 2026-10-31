@@ -60,7 +60,6 @@
     "typescript": "~6.0.3"
   },
   "optionalDependencies": {
-    "@owdproject/nuxt-app-classic-audioplayer": "^4.0.0-alpha.3",
     "@owdproject/nuxt-module-pinia-persistence": "^4.0.0-alpha.3"
   },
   "peerDependencies": {

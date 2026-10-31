@@ -19,139 +19,41 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout OWD client (workspace deps)
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt-desktop
-          path: client
-          submodules: recursive
-
-      - name: Checkout @owdproject/nuxt
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt
-          path: client/packages/nuxt
-
-      - name: Checkout kit-nuxt-tailwind
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt-kit-tailwind
-          path: client/packages/owd-kit-nuxt-tailwind
-
-      - name: Checkout kit-nuxt-primevue
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt-kit-primevue
-          path: client/packages/owd-kit-nuxt-primevue
-
-      - name: Checkout module-fs
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt-module-fs
-          path: client/packages/owd-module-fs
-
-      - name: Checkout module-persistence
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt-module-pinia-persistence
-          path: client/packages/module-persistence
-
-      - name: Checkout app-todo
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt-app-todo
-          path: client/apps/app-todo
-
-      - name: Checkout app-classic-audioplayer
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt-app-classic-audioplayer
-          path: client/apps/app-classic-audioplayer
-
-      - name: Checkout app-classic-videoplayer
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt-app-classic-videoplayer
-          path: client/apps/app-classic-videoplayer
-
-      - name: Checkout app-gridsky
-        uses: actions/checkout@v4
-        with:
-          repository: atproto-os/app-gridsky
-          path: client/apps/app-gridsky
-
-      - name: Checkout app-youtube
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt-app-youtube
-          path: client/apps/app-youtube
-
-      - name: Checkout app-soundcloud
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt-app-soundcloud
-          path: client/apps/app-soundcloud
-
-      - name: Checkout app-wasmboy
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt-app-wasmboy
-          path: client/apps/app-wasmboy
-
-      - name: Checkout app-terminal
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt-app-terminal
-          path: client/apps/app-terminal
-
-      - name: Checkout theme-paper
-        uses: actions/checkout@v4
-        with:
-          repository: owdproject/nuxt-theme-paper
-          path: client/themes/owd-nuxt-theme-paper
-
-      - name: Overlay this theme-win11 repo
-        uses: actions/checkout@v4
-        with:
-          path: client/themes/theme-win11
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: 22
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
       - run: npm i -g --force corepack@latest && corepack enable
 
-      - name: Apply wasmboy allowBuilds for playground
-        working-directory: client
-        run: |
-          node themes/theme-win11/ci/patch-client-workspace.mjs
-          grep -Fq 'audiobuffer-to-wav@https://codeload.github.com/torch2424/audiobuffer-to-wav' pnpm-workspace.yaml
-
-      - name: Install monorepo dependencies
-        working-directory: client
+      - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
       - name: Prepare module and playground
-        working-directory: client/themes/theme-win11
         run: pnpm run dev:prepare
 
       - name: Generate static playground
-        working-directory: client/themes/theme-win11
         run: pnpm run dev:generate
         env:
-          NUXT_APP_BASE_URL: /theme-win11/
+          NUXT_APP_BASE_URL: /owd-nuxt-theme-win11/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: client/themes/theme-win11/playground/.output/public
+          path: playground/.output/public
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

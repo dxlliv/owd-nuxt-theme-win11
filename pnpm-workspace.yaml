@@ -1,0 +1,10 @@
+packages:
+  - 'playground'
+allowBuilds:
+  esbuild: true
+  '@parcel/watcher': true
+  '@swc/core': true
+  unrs-resolver: true
+  core-js: true
+blockExoticSubdeps: false
+minimumReleaseAge: 0
