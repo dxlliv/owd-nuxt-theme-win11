@@ -145,7 +145,7 @@ const { onDragStart, onDragEnd } = useWindowDragHandlers(
   min-height: 0;
 }
 
-:deep(.owd-window:not(.owd-window--focused)) iframe {
+:deep(.desktop-window:not(.desktop-window--focused)) iframe {
   pointer-events: none;
 }
 </style>

@@ -1,7 +1,7 @@
 /*
  * Windows 11 Settings app — layout + surfaces inside `.win11-settings-window`.
  */
-.owd-desktop--win11 .win11-settings-window {
+.desktop-shell--win11 .win11-settings-window {
   > .p-card {
     background: var(--win11-settings-surface, rgba(32, 32, 32, 0.78));
   }
@@ -10,7 +10,7 @@
     background: var(--win11-settings-surface, rgba(32, 32, 32, 0.78));
   }
 
-  .owd-window__content {
+  .desktop-window__content {
     overflow: hidden !important;
   }
 }
@@ -457,7 +457,7 @@
   cursor: pointer;
 }
 
-.owd-desktop--win11.win11-personalization-appearance-light {
+.desktop-shell--win11.win11-personalization-appearance-light {
   .win11-settings {
     --win11-settings-surface: rgba(243, 245, 248, 0.94);
     --win11-settings-nav-bg: rgba(236, 239, 244, 0.96);
@@ -470,7 +470,7 @@
 
   .win11-settings-window > .p-card,
   .win11-settings-window > .p-card > .p-card-body {
-    background: var(--win11-settings-surface);
+    background: var(--win11-settings-surface, rgba(243, 245, 248, 0.94));
   }
 
   .win11-settings__nav-search-input {

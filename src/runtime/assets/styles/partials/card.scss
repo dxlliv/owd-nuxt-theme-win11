@@ -1,8 +1,8 @@
 /*
- * Window chrome only (Card as direct child of `.owd-window`).
+ * Window chrome only (Card as direct child of `.desktop-window`).
  * Avoid styling every `.p-card` (dialogs, panels, DataTable internals).
  */
-.owd-desktop--win11 .owd-window.resizable-component {
+.desktop-shell--win11 .desktop-window.resizable-component {
   box-sizing: border-box;
   display: inline-block;
   min-width: 160px;

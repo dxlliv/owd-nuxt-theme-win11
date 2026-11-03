@@ -1,0 +1,35 @@
+/*
+ * Window content layout helpers.
+ *
+ * The engine toggles modifier classes on `.desktop-window__content` from the
+ * `content` option passed to `DesktopWindow`:
+ *
+ *   <DesktopWindow :content="{ padded: true }">   -> .desktop-window__content--padded
+ *   <DesktopWindow :content="{ centered: true }"> -> .desktop-window__content--centered
+ *
+ * The engine only adds the classes; each theme must provide the actual spacing
+ * and centering. Without these rules the content renders un-padded and
+ * top-aligned (the About app relied on `centered` for its vertical alignment).
+ */
+.desktop-shell--win11 {
+  /* Default inner spacing for app windows. */
+  .desktop-window__content--padded {
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  /* Vertically + horizontally centre the window body (About, welcome, …). */
+  .desktop-window__content--centered .desktop-window-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 0;
+    text-align: center;
+  }
+
+  .desktop-window__content--centered .desktop-window-body > * {
+    width: 100%;
+  }
+}

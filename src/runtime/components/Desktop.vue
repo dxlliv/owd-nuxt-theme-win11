@@ -114,7 +114,7 @@ const { onWorkspaceDragOver, onWorkspaceDrop } = useDesktopWorkspaceManager()
 function onWorkspacePanelClick(workspaceId: string, e: MouseEvent) {
   if (!desktopWorkspaceStore.overview) return
   const target = e.target as HTMLElement | null
-  if (target?.closest('.owd-window')) return
+  if (target?.closest('.desktop-window')) return
   desktopWorkspaceStore.setWorkspace(workspaceId)
   desktopWorkspaceStore.setOverview(false)
 }
@@ -283,7 +283,7 @@ function onWorkspacePanelClick(workspaceId: string, e: MouseEvent) {
 <style lang="scss">
 @use '../assets/styles/index.scss';
 
-.owd-desktop {
+.desktop-shell {
   font-family: var(--owd-font-family), system-ui, sans-serif;
 
   button {
@@ -318,7 +318,7 @@ function onWorkspacePanelClick(workspaceId: string, e: MouseEvent) {
   pointer-events: none;
 }
 
-.win11-shell__windows :deep(.owd-window) {
+.win11-shell__windows :deep(.desktop-window) {
   pointer-events: auto;
 }
 
@@ -329,7 +329,7 @@ function onWorkspacePanelClick(workspaceId: string, e: MouseEvent) {
   pointer-events: none;
 }
 
-.win11-workspace-stack :deep(.owd-window) {
+.win11-workspace-stack :deep(.desktop-window) {
   pointer-events: auto;
 }
 

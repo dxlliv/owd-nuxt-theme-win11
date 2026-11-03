@@ -3,6 +3,7 @@
 @use './partials/scrollbar.scss';
 @use './partials/card.scss';
 @use './partials/window-chrome.scss';
+@use './partials/window-content.scss';
 @use './partials/button.scss';
 @use './partials/menu.scss';
 @use './partials/contextmenu.scss';
@@ -78,7 +79,7 @@
   border: 0;
 }
 
-.owd-desktop {
+.desktop-shell {
   font-size: var(--p-font-size);
   line-height: 1.25rem;
 }

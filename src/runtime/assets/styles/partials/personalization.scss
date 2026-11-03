@@ -1,5 +1,5 @@
 /* Personalization tokens for Win11 shell/window surfaces. */
-.owd-desktop--win11 {
+.desktop-shell--win11 {
   --win11-shell-surface: rgba(36, 36, 36, 0.80);
   --win11-shell-border: rgba(66, 66, 66, 0.2);
   --win11-shell-text: rgba(255, 255, 255, 0.92);
@@ -63,7 +63,7 @@
   }
 }
 
-.owd-desktop--win11.win11-personalization-appearance-light {
+.desktop-shell--win11.win11-personalization-appearance-light {
   --win11-shell-surface: rgba(245, 247, 250, 0.88);
   --win11-shell-border: rgba(130, 146, 164, 0.35);
   --win11-shell-text: rgba(24, 30, 36, 0.98);
@@ -114,7 +114,7 @@
 }
 
 /* After appearance so tint applies in both dark and light. */
-.owd-desktop--win11.win11-personalization-window-solid {
+.desktop-shell--win11.win11-personalization-window-solid {
   --win11-window-surface-unified: var(--win11-window-tint, #2d2d30);
   --win11-window-card-bg: var(--win11-window-surface-unified);
   --win11-window-card-body-bg: var(--win11-window-surface-unified);
@@ -144,7 +144,7 @@
   );
 }
 
-.owd-desktop--win11.win11-personalization-window-solid.win11-personalization-appearance-light {
+.desktop-shell--win11.win11-personalization-window-solid.win11-personalization-appearance-light {
   --win11-explorer-caption-bg: color-mix(
     in srgb,
     var(--win11-window-tint, #e8eaed) 88%,

@@ -2,8 +2,8 @@
  * Generic app windows (Todo, Settings, …).
  * Explorer uses `.win11-explorer-frame` in explorer-chrome.scss.
  */
-.owd-desktop--win11 .owd-window.resizable-component:not(.win11-explorer-frame) {
-  > .p-card > .p-card-header .owd-window-nav {
+.desktop-shell--win11 .desktop-window.resizable-component:not(.win11-explorer-frame) {
+  > .p-card > .p-card-header .desktop-window-nav {
     display: flex;
     align-items: center;
     flex-shrink: 0;
@@ -74,11 +74,11 @@
   }
 }
 
-.owd-desktop--win11.win11-personalization-appearance-light
-  .owd-window.resizable-component:not(.win11-explorer-frame)
+.desktop-shell--win11.win11-personalization-appearance-light
+  .desktop-window.resizable-component:not(.win11-explorer-frame)
   > .p-card
   > .p-card-header
-  .owd-window-nav {
+  .desktop-window-nav {
   .owd-window-nav__button {
     color: rgba(24, 30, 36, 0.88);
 

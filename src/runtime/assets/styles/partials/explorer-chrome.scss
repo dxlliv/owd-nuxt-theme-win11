@@ -2,8 +2,8 @@
  * Win11 Explorer: caption (tab strip) vs light chrome band (breadcrumb/search) vs darker body.
  * Flush Card padding uses DesktopWindow chromePadding=false + .win11-explorer-frame.
  */
-.owd-desktop--win11 {
-  .owd-window.win11-explorer-frame {
+.desktop-shell--win11 {
+  .desktop-window.win11-explorer-frame {
     &:has(.win11-explorer-tab-strip) {
       --owd-windov-nav-height: 34px;
     }
@@ -20,7 +20,7 @@
       background: var(--win11-explorer-chrome-dark);
     }
 
-    .p-card-header .owd-window-nav {
+    .p-card-header .desktop-window-nav {
       align-items: stretch;
       min-height: var(--owd-windov-nav-height);
       background: var(--win11-explorer-caption-bg) !important;
@@ -64,11 +64,11 @@
     }
 
     /*
-     * DesktopWindow applies `overflow-y: auto` on `.owd-window__content`, which scrolls the
+     * DesktopWindow applies `overflow-y: auto` on `.desktop-window__content`, which scrolls the
      * entire explorer body (command bar + nav + grid + status bar). Pin chrome: scroll only
      * inside the content pane / nav columns.
      */
-    .owd-window__content {
+    .desktop-window__content {
       display: flex;
       flex-direction: column;
       min-height: 0;

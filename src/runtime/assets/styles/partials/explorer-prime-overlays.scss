@@ -127,7 +127,7 @@
   }
 }
 
-body:has(.owd-desktop--win11.win11-personalization-appearance-light)
+body:has(.desktop-shell--win11.win11-personalization-appearance-light)
   .win11-explorer-popup-menu.p-menu {
   background: rgba(252, 253, 255, 0.96) !important;
   color: rgba(24, 30, 36, 0.96) !important;
@@ -153,7 +153,7 @@ body:has(.owd-desktop--win11.win11-personalization-appearance-light)
   }
 }
 
-body:has(.owd-desktop--win11.win11-personalization-appearance-light)
+body:has(.desktop-shell--win11.win11-personalization-appearance-light)
   .win11-explorer-popup-menu.p-tieredmenu {
   background: rgba(252, 253, 255, 0.96) !important;
   color: rgba(24, 30, 36, 0.96) !important;
