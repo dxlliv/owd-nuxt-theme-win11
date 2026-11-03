@@ -1,12 +1,15 @@
 <script setup lang="ts">
-import { useDesktopStore } from '@owdproject/nuxt/runtime/stores/storeDesktop'
-import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useWin11Personalization } from '../../../../composables/useWin11Personalization'
 
-const desktopStore = useDesktopStore()
 const { t } = useI18n()
 
-const personalization = computed(() => desktopStore.state.personalization)
+const {
+  personalization,
+  setWindowSurface,
+  setAppearance,
+  setWindowTint,
+} = useWin11Personalization()
 
 const tintPresets = [
   { value: '#2d2d30', label: 'Graphite' },
@@ -17,15 +20,11 @@ const tintPresets = [
 ]
 
 function setSurface(value: 'acrylic' | 'solid') {
-  desktopStore.setWindowSurface(value)
-}
-
-function setAppearance(value: 'dark' | 'light') {
-  desktopStore.setAppearance(value)
+  setWindowSurface(value)
 }
 
 function setTint(value: string) {
-  desktopStore.setWindowTint(value)
+  setWindowTint(value)
 }
 </script>
 

@@ -87,6 +87,11 @@ export default defineDesktopTheme({
     addImportsDir(resolve('./runtime/composables'))
 
     addPlugin({
+      src: resolve('./runtime/plugins/win11-personalization.client.ts'),
+      mode: 'client',
+    })
+
+    addPlugin({
       src: resolve('./runtime/plugins/50.desktop-theme-win11-dialogs.client.ts'),
       mode: 'client',
     })

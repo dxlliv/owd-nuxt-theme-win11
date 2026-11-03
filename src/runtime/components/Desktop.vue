@@ -4,7 +4,6 @@ import { useNow } from '@vueuse/core'
 import { useAppConfig } from 'nuxt/app'
 import { useApplicationManager } from '@owdproject/nuxt/runtime/composables/useApplicationManager'
 import { useDesktopWorkspaceManager } from '@owdproject/nuxt/runtime/composables/workspace/useDesktopWorkspaceManager'
-import { useDesktopStore } from '@owdproject/nuxt/runtime/stores/storeDesktop'
 import { useDesktopWorkspaceStore } from '@owdproject/nuxt/runtime/stores/storeDesktopWorkspace'
 import { useDesktopSession } from '@owdproject/nuxt/runtime/composables/useDesktopSession'
 import { useBlockNonInputContextMenu } from '@owdproject/nuxt/runtime/composables/useBlockNonInputContextMenu'
@@ -14,10 +13,11 @@ import Win11WorkspaceEdgeHints from './Win11WorkspaceEdgeHints.vue'
 import Win11ConfirmDialogs from './Win11ConfirmDialogs.vue'
 import { useI18n } from 'vue-i18n'
 import searchIconUrl from '../../../public/search.webp?url'
+import { useWin11Personalization } from '../composables/useWin11Personalization'
 
 const appConfig = useAppConfig()
 const applicationManager = useApplicationManager()
-const desktopStore = useDesktopStore()
+const { personalization } = useWin11Personalization()
 const desktopWorkspaceStore = useDesktopWorkspaceStore()
 const { shuttingDown } = useDesktopSession()
 const { t } = useI18n()
@@ -28,17 +28,16 @@ const workspacesEnabled = computed(
       ?.enabled,
 )
 
-const personalization = computed(() => desktopStore.state.personalization)
 const shellClassList = computed(() => ({
   'win11-personalization-window-solid':
-    personalization.value.windowSurface === 'solid',
+    personalization.windowSurface === 'solid',
   'win11-personalization-appearance-light':
-    personalization.value.appearance === 'light',
+    personalization.appearance === 'light',
   'win11-personalization-appearance-dark':
-    personalization.value.appearance === 'dark',
+    personalization.appearance === 'dark',
 }))
 const shellStyle = computed(() => ({
-  '--win11-window-tint': personalization.value.windowTint,
+  '--win11-window-tint': personalization.windowTint,
 }))
 
 useBlockNonInputContextMenu()
